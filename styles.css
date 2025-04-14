@@ -699,6 +699,12 @@ footer {
     }
 }
 
+/* Updated Footer Logo Size */
+.footer-logo img {
+    height: 250px; /* Increased from 50px */
+    margin-bottom: 20px;
+}
+
 @media (max-width: 576px) {
     section {
         padding: 60px 0;
