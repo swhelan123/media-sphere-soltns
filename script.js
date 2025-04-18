@@ -1,88 +1,149 @@
-// Wait for DOM to load
-document.addEventListener('DOMContentLoaded', function() {
-    // Navigation and header functionality
-    const header = document.querySelector('header');
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const navLinksA = document.querySelectorAll('.nav-links a');
+/* --------------------------------------------------
+  Media Sphere Solutions – global JS
+  Completed by ChatGPT (17 Apr 2025)
+  -------------------------------------------------- */
 
-    // Scroll event for header shadow and background
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+// Wrap everything so we don’t pollute the global scope
+(() => {
+  "use strict";
+
+  // ————————————————————————————————————————
+  // Helper: element selectors
+  // ————————————————————————————————————————
+  const $ = (s, o = document) => o.querySelector(s);
+  const $$ = (s, o = document) => [...o.querySelectorAll(s)];
+
+  // Wait for DOM
+  document.addEventListener("DOMContentLoaded", () => {
+    /* --------------------------------------------------
+           1.  Navigation / header behaviour
+           -------------------------------------------------- */
+    const header = $("header");
+    const hamburger = $(".hamburger");
+    const navLinks = $(".nav-links");
+    const navAnchors = $$(".nav-links a");
+    const sections = $$("section[id]");
+
+    // Shadow‑on‑scroll + active‑link highlighting
+    const onScroll = () => {
+      // header shadow
+      header.classList.toggle("scrolled", window.scrollY > 50);
+
+      // highlight nav link
+      const scrollPos = window.scrollY + header.offsetHeight + 10;
+      sections.forEach((sec) => {
+        const top = sec.offsetTop;
+        const bottom = top + sec.offsetHeight;
+        const id = sec.getAttribute("id");
+        const link = $(`.nav-links a[href="#${id}"]`);
+        if (scrollPos >= top && scrollPos < bottom) {
+          navAnchors.forEach((a) => a.classList.remove("active"));
+          link?.classList.add("active");
         }
+      });
 
-        // Activate process items on scroll
-        animateOnScroll();
+      // trigger reveal animations
+      revealProcessItems();
+    };
+    window.addEventListener("scroll", onScroll);
+
+    // Hamburger toggle
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("active");
     });
 
-    // Mobile menu toggle
-    hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
+    // Close mobile nav when a link is clicked
+    navAnchors.forEach((a) =>
+      a.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("active");
+      }),
+    );
 
-        // Animate hamburger
-        const spans = hamburger.querySelectorAll('span');
-        if (hamburger.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
+    /* --------------------------------------------------
+           2. Smooth‑scroll for internal anchor links
+           -------------------------------------------------- */
+    $$('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = $(anchor.getAttribute("href"));
+        if (!target) return;
+
+        const offset = header.offsetHeight;
+        const targetPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: targetPos, behavior: "smooth" });
+      });
+    });
+
+    /* --------------------------------------------------
+           3. Reveal animations for .process-item
+           -------------------------------------------------- */
+    const processItems = $$(".process-item");
+    // Add basic opacity transform class via CSS once visible
+    function revealProcessItems() {
+      processItems.forEach((item) => {
+        if (item.dataset.revealed) return; // already revealed
+        const { top } = item.getBoundingClientRect();
+        if (top < window.innerHeight * 0.85) {
+          item.dataset.revealed = "true";
+          item.classList.add("visible");
         }
-    });
+      });
+    }
+    // Call once in case some items are already in view
+    revealProcessItems();
 
-    // Close mobile menu on link click
-    navLinksA.forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
+    /* --------------------------------------------------
+           4. Contact‑form handling (static‑site friendly)
+           -------------------------------------------------- */
+    const form = $("#contact-form");
+    if (form) {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const btn = $("button[type=submit]", form) || form.querySelector(".cta-btn");
+        if (btn) btn.disabled = true;
 
-            const spans = hamburger.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        });
-    });
+        const data = Object.fromEntries(new FormData(form).entries());
 
-    // Smooth scrolling for all internal links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+        try {
+          // 👉 replace URL with your endpoint / Formspree ID etc
+          const res = await fetch("https://formspree.io/f/yourFormID", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
 
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+          if (res.ok) {
+            form.reset();
+            alert("Thanks – we\'ll be in touch within 24 hrs!");
+          } else {
+            throw new Error("Network response was not ok");
+          }
+        } catch (err) {
+          console.error(err);
+          alert("Sorry, something went wrong. Please try again later or email us directly.");
+        } finally {
+          if (btn) btn.disabled = false;
+        }
+      });
+    }
 
-            if (targetElement) {
-                // Calculate header height for scroll offset
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+    /* --------------------------------------------------
+           5. Dynamic copyright year
+           -------------------------------------------------- */
+    const yearSpan = $("footer .copyright p");
+    if (yearSpan) {
+      const year = new Date().getFullYear();
+      yearSpan.innerHTML = `&copy; ${year} Media Sphere Solutions. All rights reserved.`;
+    }
+  });
+})();
 
-                window.scrollTo({
-                    top: targetPosition - headerHeight,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Form submission handling
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Collect form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
-                message: document.getElementById('message').value
-            };
-
-            // You would normally send this data to
+/* --------------------------------------------------
+   Minimal styles injected for .visible (only if not
+   using AOS for performance reasons on mobile)
+   -------------------------------------------------- */
+const style = document.createElement("style");
+style.textContent = `.process-item{opacity:0;transform:translateY(30px);transition:all .6s ease-out}.process-item.visible{opacity:1;transform:none}`;
+document.head.appendChild(style);
