@@ -29,6 +29,7 @@
     setCopyrightYear();
 
     console.log("✅ Media Sphere Solutions initialized successfully!");
+    console.log("🤓 Hello nerds!");
   });
 
   // Vanta Globe Initialization (keeping your working version)
