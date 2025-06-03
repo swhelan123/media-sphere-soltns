@@ -1114,3 +1114,11 @@ body::-webkit-scrollbar {
 *::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
 }
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 35px; /* Additional space specifically for the title */
+}
