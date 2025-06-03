@@ -107,8 +107,12 @@
     const navMenu = $("#nav-menu");
     const navLinks = $$(".nav-link");
     const navContainer = $(".nav-container");
+    const scrollThreshold = 10; // Set how many pixels of scrolling are needed to show the navbar
 
     if (!navbar || !navToggle || !navMenu) return;
+
+    // Hide navbar initially
+    navbar.classList.add("navbar-hidden");
 
     // Add padding and slide-in animations
     setTimeout(() => {
@@ -117,6 +121,13 @@
 
     // Scroll effect for navbar
     window.addEventListener("scroll", function () {
+      // Show navbar as soon as user starts scrolling beyond threshold
+      if (window.scrollY > scrollThreshold) {
+        navbar.classList.remove("navbar-hidden");
+      } else {
+        navbar.classList.add("navbar-hidden");
+      }
+      
       if (window.scrollY > 100) {
         navbar.classList.add("scrolled");
       } else {
