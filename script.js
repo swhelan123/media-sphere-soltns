@@ -1,9 +1,9 @@
 /* --------------------------------------------------
   Media Sphere Solutions – global JS
-  Completed by ChatGPT (17 Apr 2025)
+  Completed by ChatGPT (17 Apr 2025)
   -------------------------------------------------- */
 
-// Wrap everything so we don’t pollute the global scope
+// Wrap everything so we don't pollute the global scope
 (() => {
   "use strict";
 
@@ -95,7 +95,49 @@
     revealProcessItems();
 
     /* --------------------------------------------------
-           4. Contact‑form handling (static‑site friendly)
+           4. Initialize Vanta.js Globe Background
+           -------------------------------------------------- */
+    let vantaEffect = null;
+
+    function initVanta() {
+      if (typeof VANTA !== "undefined" && VANTA.GLOBE) {
+        const vantaElement = $("#vanta-background");
+        if (vantaElement && !vantaEffect) {
+          vantaEffect = VANTA.GLOBE({
+            el: vantaElement,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            color: 0xd4af37, // Gold color to match your theme
+            color2: 0xb8860b, // Darker gold
+            size: 0.8,
+            backgroundColor: 0x121212, // Dark background
+            spacing: 15.0,
+            points: 10.0,
+          });
+        }
+      } else {
+        // Retry after a short delay if VANTA is not loaded yet
+        setTimeout(initVanta, 100);
+      }
+    }
+
+    // Initialize Vanta after a brief delay to ensure libraries are loaded
+    setTimeout(initVanta, 100);
+
+    // Clean up Vanta effect when page is unloaded
+    window.addEventListener("beforeunload", () => {
+      if (vantaEffect) {
+        vantaEffect.destroy();
+      }
+    });
+
+    /* --------------------------------------------------
+           5. Contact‑form handling (static‑site friendly)
            -------------------------------------------------- */
     const form = $("#contact-form");
     if (form) {
@@ -116,7 +158,7 @@
 
           if (res.ok) {
             form.reset();
-            alert("Thanks – we\'ll be in touch within 24 hrs!");
+            alert("Thanks – we\'ll be in touch within 24 hrs!");
           } else {
             throw new Error("Network response was not ok");
           }
@@ -130,7 +172,7 @@
     }
 
     /* --------------------------------------------------
-           5. Dynamic copyright year
+           6. Dynamic copyright year
            -------------------------------------------------- */
     const yearSpan = $("footer .copyright p");
     if (yearSpan) {
