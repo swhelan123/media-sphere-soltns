@@ -1,322 +1,476 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Essential Meta Tags -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Media Sphere Solutions | Marketing Automation & Growth Strategy Experts</title>
-        <meta
-            name="description"
-            content="Media Sphere Solutions helps ambitious brands scale with marketing automation, growth strategies, and converting content. Book a free discovery call today."
-        />
-        <meta name="keywords" content="marketing automation, growth strategy, brand scaling, content marketing, CRM automation, paid ads, funnel building" />
-        <meta name="author" content="Media Sphere Solutions" />
+        <title>Media Sphere Solutions | Elite Marketing & Growth Partners</title>
+        <meta name="description" content="Premium marketing automation and growth strategy for ambitious brands. Transform your business with our data-driven approach and proven methodologies." />
+
+        <!-- Preload critical fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="images/favicon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-
-        <!-- Canonical URL -->
-        <link rel="canonical" href="https://mediaspheresolutions.com/" />
-
-        <!-- Open Graph / Facebook Meta Tags -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mediaspheresolutions.com/" />
-        <meta property="og:title" content="Media Sphere Solutions | Growth Marketing Experts" />
-        <meta property="og:description" content="Helping ambitious brands scale with systems, strategy, and story. Book a free discovery call today." />
-        <meta property="og:image" content="https://mediaspheresolutions.com/images/og-image.jpg" />
-
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://mediaspheresolutions.com/" />
-        <meta name="twitter:title" content="Media Sphere Solutions | Growth Marketing Experts" />
-        <meta name="twitter:description" content="Helping ambitious brands scale with systems, strategy, and story. Book a free discovery call today." />
-        <meta name="twitter:image" content="https://mediaspheresolutions.com/images/twitter-image.jpg" />
-
-        <!-- Robots and Other SEO Tags -->
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="styles.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-        <!-- Preconnect to External Domains -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-
-        <!-- Structured Data / Schema.org -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Media Sphere Solutions",
-                "url": "https://mediaspheresolutions.com",
-                "logo": "https://mediaspheresolutions.com/images/logo.svg",
-                "description": "Media Sphere Solutions helps ambitious brands scale with marketing automation, growth strategies, and converting content.",
-                "email": "contact@mediaspheresolutions.com",
-                "telephone": "+353 87 672 1287",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressCountry": "Ireland"
-                },
-                "serviceType": ["Marketing Automation", "Growth Strategy", "Content Marketing", "Paid Advertising"]
-            }
-        </script>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <nav>
-                    <div class="logo">
-                        <img src="images/logo.png" alt="Media Sphere Solutions Logo" />
-                    </div>
-                    <ul class="nav-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#process">Our Process</a></li>
-                        <li><a href="#clients">Who We Work With</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </nav>
-            </div>
-        </header>
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="images/logo.png" alt="Media Sphere Solutions" class="logo" />
+                </div>
 
-        <section id="home" class="section hero">
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link" data-section="home">Home</a>
+                    <a href="#services" class="nav-link" data-section="services">Services</a>
+                    <a href="#process" class="nav-link" data-section="process">Process</a>
+                    <a href="#approach" class="nav-link" data-section="approach">Our Approach</a>
+                    <a href="#team" class="nav-link" data-section="team">Team</a>
+                    <a href="#contact" class="nav-link nav-link-cta">Get Started</a>
+                </div>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section with Vanta Background -->
+        <section id="home" class="hero">
             <div id="vanta-background"></div>
+            <div class="hero-overlay"></div>
             <div class="container">
                 <div class="hero-content">
-                    <h1>We Help Ambitious Brands Scale with Systems, Strategy, and Story.</h1>
-                    <p>Growth-focused marketing campaigns, automation, and content that convert.</p>
-                    <a href="#contact" class="cta-btn">Book Free Discovery Call</a>
+                    <h1 class="hero-title">
+                        <span class="hero-title-main">Transform Your Business</span>
+                        <span class="hero-title-sub">With Strategic Marketing Excellence</span>
+                    </h1>
+                    <p class="hero-description">
+                        We partner with ambitious brands to create marketing systems that drive growth. From automation to strategy, we turn your vision into measurable results.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Start Your Journey</a>
+                        <a href="#process" class="btn btn-secondary">Our Approach</a>
+                    </div>
+                    <div class="hero-values">
+                        <div class="value">
+                            <span class="value-title">Data-Driven</span>
+                            <span class="value-label">Every decision backed by insights</span>
+                        </div>
+                        <div class="value">
+                            <span class="value-title">Growth-Focused</span>
+                            <span class="value-label">Strategies that scale with you</span>
+                        </div>
+                        <div class="value">
+                            <span class="value-title">Results-Oriented</span>
+                            <span class="value-label">Measurable impact on your bottom line</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
             </div>
         </section>
 
-        <section id="process" class="section process">
+        <!-- Services Section -->
+        <section id="services" class="section services">
             <div class="container">
-                <h2>Our Process</h2>
-                <div class="process-grid">
-                    <div class="process-item" data-aos="fade-up">
-                        <div class="process-icon">
-                            <i class="fas fa-search-plus"></i>
+                <div class="section-header">
+                    <h2 class="section-title">Strategic Services</h2>
+                    <p class="section-subtitle">Comprehensive solutions designed to accelerate your growth trajectory</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-icon">
+                            <i class="fas fa-rocket"></i>
                         </div>
-                        <h3 class="gold-text">Audit & Strategy</h3>
-                        <p>We learn your brand inside-out and build a bespoke growth strategy.</p>
+                        <h3>Growth Strategy</h3>
+                        <p>Data-driven strategies that identify opportunities and create sustainable competitive advantages for your brand.</p>
+                        <ul class="service-features">
+                            <li>Market Analysis & Positioning</li>
+                            <li>Competitor Intelligence</li>
+                            <li>Growth Framework Development</li>
+                        </ul>
                     </div>
-                    <div class="process-item" data-aos="fade-up" data-aos-delay="200">
-                        <div class="process-icon">
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
                             <i class="fas fa-cogs"></i>
                         </div>
-                        <h3 class="gold-text">Execution & Automation</h3>
-                        <p>We create content, launch ads, and integrate automations across your systems.</p>
+                        <h3>Marketing Automation</h3>
+                        <p>Sophisticated automation systems that nurture leads, optimize conversions, and scale your operations seamlessly.</p>
+                        <ul class="service-features">
+                            <li>CRM Integration & Optimization</li>
+                            <li>Email & SMS Campaigns</li>
+                            <li>Lead Scoring & Nurturing</li>
+                        </ul>
                     </div>
-                    <div class="process-item" data-aos="fade-up" data-aos-delay="400">
-                        <div class="process-icon">
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="gold-text">Performance & Scale</h3>
-                        <p>We optimize, analyze, and push growth month after month.</p>
+                        <h3>Performance Marketing</h3>
+                        <p>ROI-focused campaigns across all digital channels, optimized for maximum impact and measurable business outcomes.</p>
+                        <ul class="service-features">
+                            <li>Paid Advertising (Meta, Google)</li>
+                            <li>Conversion Rate Optimization</li>
+                            <li>Analytics & Attribution</li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="clients" class="section clients">
-            <div class="container">
-                <h2>Who We Work With</h2>
-                <div class="clients-grid">
-                    <div class="client-item elegant-border">
-                        <div class="client-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h3>Real Estate Brands</h3>
-                    </div>
-                    <div class="client-item elegant-border">
-                        <div class="client-icon">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <h3>Coaches & Agencies</h3>
-                    </div>
-                    <div class="client-item elegant-border">
-                        <div class="client-icon">
-                            <i class="fas fa-hard-hat"></i>
-                        </div>
-                        <h3>Construction Firms</h3>
-                    </div>
-                    <div class="client-item elegant-border">
-                        <div class="client-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <h3>E-Commerce Brands</h3>
-                    </div>
-                    <div class="client-item elegant-border">
-                        <div class="client-icon">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h3>Creators & Influencers</h3>
-                    </div>
-                    <div class="client-item elegant-border">
-                        <div class="client-icon">
-                            <i class="fas fa-briefcase-medical"></i>
-                        </div>
-                        <h3>Service Based Companies & Clinics</h3>
+                        <h3>Brand Development</h3>
+                        <p>Comprehensive brand strategy that resonates with your audience and differentiates you in the marketplace.</p>
+                        <ul class="service-features">
+                            <li>Brand Identity & Messaging</li>
+                            <li>Content Strategy & Creation</li>
+                            <li>Thought Leadership Development</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="section about">
+        <!-- Process Section -->
+        <section id="process" class="section process">
             <div class="container">
-                <h2>About Us</h2>
-                <div class="team">
-                    <div class="team-member">
-                        <img src="images/james.jpg" alt="James Colville" />
-                        <h3>James Colville</h3>
-                        <p>Head of Marketing</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/charlie.png" alt="Charlie McConnell" />
-                        <h3>Charlie McConnell</h3>
-                        <p>Founder & Marketing Strategist</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/shane.png" alt="Shane Whelan" />
-                        <h3>Shane Whelan</h3>
-                        <p>Web Developer</p>
-                        <!-- <a href="https://shane-whelan.ie" target="_blank" class="team-link">shane-whelan.ie</a> -->
-                    </div>
+                <div class="section-header">
+                    <h2 class="section-title">Our Methodology</h2>
+                    <p class="section-subtitle">A proven framework that transforms challenges into opportunities</p>
                 </div>
-                <div class="expertise">
-                    <h3>Our Expertise</h3>
-                    <div class="expertise-grid">
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-server"></i>
-                            <p>Backend automation</p>
+
+                <div class="process-timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-marker">
+                            <span>01</span>
                         </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-project-diagram"></i>
-                            <p>CRM automation & pipeline management</p>
+                        <div class="timeline-content">
+                            <h3>Discovery & Analysis</h3>
+                            <p>Deep-dive audit of your current marketing ecosystem, identifying gaps, opportunities, and competitive positioning.</p>
+                            <div class="timeline-features">
+                                <span>Brand Audit</span>
+                                <span>Market Research</span>
+                                <span>Customer Journey Mapping</span>
+                            </div>
                         </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-calendar-check"></i>
-                            <p>Opportunity setting systems</p>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-marker">
+                            <span>02</span>
                         </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-envelope-open-text"></i>
-                            <p>Cold outreach (email, DM, and multi-channel)</p>
+                        <div class="timeline-content">
+                            <h3>Strategic Planning</h3>
+                            <p>Custom strategy development based on your unique goals, market position, and growth objectives.</p>
+                            <div class="timeline-features">
+                                <span>Growth Strategy</span>
+                                <span>Channel Selection</span>
+                                <span>KPI Framework</span>
+                            </div>
                         </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-ad"></i>
-                            <p>Paid ads (Meta, Google, TikTok) with specific targeting</p>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker">
+                            <span>03</span>
                         </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-filter"></i>
-                            <p>Funnel building & conversion optimization</p>
+                        <div class="timeline-content">
+                            <h3>Implementation</h3>
+                            <p>Systematic execution of marketing initiatives with continuous monitoring and real-time optimization.</p>
+                            <div class="timeline-features">
+                                <span>Campaign Launch</span>
+                                <span>System Integration</span>
+                                <span>Team Training</span>
+                            </div>
                         </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-envelope"></i>
-                            <p>Lead nurturing sequences (email/SMS automation)</p>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-marker">
+                            <span>04</span>
                         </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-user-plus"></i>
-                            <p>Client acquisition & retention systems</p>
-                        </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-tasks"></i>
-                            <p>SMMA operations & fulfillment systems</p>
-                        </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-sitemap"></i>
-                            <p>Content systemization for ad + organic growth</p>
-                        </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-file-alt"></i>
-                            <p>SOP development & team automation</p>
-                        </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-stream"></i>
-                            <p>Workflow streamlining & task delegation</p>
-                        </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-expand-arrows-alt"></i>
-                            <p>Cross-niche growth strategy (e-com, local service, creator)</p>
-                        </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-chart-bar"></i>
-                            <p>Data-driven decision making & KPI tracking</p>
-                        </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-plug"></i>
-                            <p>Tech stack integration (Zapier, GoHighLevel, Notion, etc.)</p>
-                        </div>
-                        <div class="expertise-item elegant-border">
-                            <i class="fas fa-comment-dots"></i>
-                            <p>Strategic brand messaging & storytelling</p>
+                        <div class="timeline-content">
+                            <h3>Optimization & Scale</h3>
+                            <p>Data-driven refinement and scaling of successful initiatives to maximize ROI and sustainable growth.</p>
+                            <div class="timeline-features">
+                                <span>Performance Analysis</span>
+                                <span>A/B Testing</span>
+                                <span>Growth Scaling</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Approach Section (replaces Results) -->
+        <section id="approach" class="section approach">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Approach</h2>
+                    <p class="section-subtitle">Why we're different and how we deliver value</p>
+                </div>
+
+                <div class="approach-grid">
+                    <div class="approach-card" data-aos="fade-up">
+                        <div class="approach-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="approach-content">
+                            <h4>Strategic Thinking</h4>
+                            <p>We don't just execute tactics. We think strategically about your business goals and create marketing systems that support long-term growth.</p>
+                        </div>
+                    </div>
+
+                    <div class="approach-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="approach-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="approach-content">
+                            <h4>Partnership Mindset</h4>
+                            <p>We work as an extension of your team, fully invested in your success. Your wins are our wins.</p>
+                        </div>
+                    </div>
+
+                    <div class="approach-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="approach-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="approach-content">
+                            <h4>Agile Execution</h4>
+                            <p>Fast implementation with continuous optimization. We adapt quickly based on data and market changes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="industries-served">
+                    <h3>Industries We Serve</h3>
+                    <div class="industries-grid">
+                        <div class="industry-item">
+                            <i class="fas fa-home"></i>
+                            <span>Real Estate</span>
+                        </div>
+                        <div class="industry-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>SaaS & Tech</span>
+                        </div>
+                        <div class="industry-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>E-commerce</span>
+                        </div>
+                        <div class="industry-item">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Professional Services</span>
+                        </div>
+                        <div class="industry-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education</span>
+                        </div>
+                        <div class="industry-item">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Healthcare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="section team">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Meet Your Growth Partners</h2>
+                    <p class="section-subtitle">Experienced professionals dedicated to your success</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-member" data-aos="fade-up">
+                        <div class="member-image">
+                            <img src="images/charlie.png" alt="Charlie McConnell" />
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="https://www.linkedin.com/in/charlie-mcconnell-343274354/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Charlie McConnell</h3>
+                            <p class="member-role">Founder & Strategic Director</p>
+                            <p class="member-bio">Passionate about helping businesses grow through innovative marketing strategies and automation systems.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-image">
+                            <img src="images/james.jpg" alt="James Colville" />
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="https://www.linkedin.com/in/james-colville-1b710b367//" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>James Colville</h3>
+                            <p class="member-role">Head of Marketing</p>
+                            <p class="member-bio">Performance marketing specialist focused on driving measurable results and optimizing campaign performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member-image">
+                            <img src="images/shane.png" alt="Shane Whelan" />
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="https://shane-whelan.ie" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
+                                    <a href="https://www.linkedin.com/in/shane-whelan-364988291/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Shane Whelan</h3>
+                            <p class="member-role">Technical Director</p>
+                            <p class="member-bio">Full-stack developer specializing in web development and communication systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
         <section id="contact" class="section contact">
             <div class="container">
-                <h2>Ready to Scale Your Brand?</h2>
-                <p>Reach out to us at mediaspheresolutions@gmail.com</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Ready to Transform Your Business?</h2>
+                        <p>Let's discuss how we can accelerate your growth and achieve your business objectives.</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Us</h4>
+                                    <a href="mailto:contact@mediaspheresolutions.com">contact@mediaspheresolutions.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Call Us</h4>
+                                    <a href="tel:+353876721287">+353 87 672 1287</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <h4>Schedule a Call</h4>
+                                    <p>Book a free 30-minute strategy session</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <!-- FORMSPREE INTEGRATION -->
+                        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xpwrznoq" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="company" placeholder="Company Name" />
+                            </div>
+                            <div class="form-group">
+                                <select name="service" required>
+                                    <option value="">Select Service Interest</option>
+                                    <option value="growth-strategy">Growth Strategy</option>
+                                    <option value="marketing-automation">Marketing Automation</option>
+                                    <option value="performance-marketing">Performance Marketing</option>
+                                    <option value="brand-development">Brand Development</option>
+                                    <option value="full-service">Full Service Partnership</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Tell us about your project and goals" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <footer>
+        <!-- Footer -->
+        <footer class="footer">
             <div class="container">
                 <div class="footer-content">
-                    <div class="footer-logo">
-                        <img src="images/logo.png" alt="Media Sphere Solutions Logo" />
+                    <div class="footer-brand">
+                        <img src="images/logo.png" alt="Media Sphere Solutions" class="footer-logo" />
+                        <p>Transforming ambitious brands through strategic marketing excellence.</p>
                     </div>
+
                     <div class="footer-links">
-                        <h4>Quick Links</h4>
+                        <h4>Services</h4>
                         <ul>
-                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Growth Strategy</a></li>
+                            <li><a href="#services">Marketing Automation</a></li>
+                            <li><a href="#services">Performance Marketing</a></li>
+                            <li><a href="#services">Brand Development</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#team">About Us</a></li>
                             <li><a href="#process">Our Process</a></li>
-                            <li><a href="#clients">Who We Work With</a></li>
-                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#approach">Our Approach</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
+
                     <div class="footer-contact">
-                        <h4>Contact Us</h4>
+                        <h4>Get in Touch</h4>
                         <p><i class="fas fa-envelope"></i> contact@mediaspheresolutions.com</p>
-                        <p><i class="fas fa-phone"></i>+353 87 672 1287</p>
+                        <p><i class="fas fa-phone"></i> +353 87 672 1287</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Dublin, Ireland</p>
                     </div>
                 </div>
-                <div class="copyright">
+
+                <div class="footer-bottom">
                     <p>&copy; 2025 Media Sphere Solutions. All rights reserved.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </footer>
 
-        <!-- Load libraries first -->
+        <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-
-        <!-- Load your main script -->
-        <script src="script.js"></script>
-
-        <!-- Load AOS last -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 800,
-                offset: 100,
-                once: true,
-            });
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>
