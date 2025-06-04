@@ -36,7 +36,7 @@ The website includes the following key sections:
 
 ## Browser Compatibility
 
-- Chrome, Firefox, Safari, Edge, Opera (latest versions)
+- Chrome, Safari, Firefox, Edge, Opera (latest versions)
 - Mobile browsers (iOS Safari, Android Chrome)
 
 ---
