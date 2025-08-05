@@ -1,6 +1,6 @@
 # Media Sphere Solutions
 
-![Media Sphere Solutions](images/logo.png)
+![Media Sphere Solutions](images/favicon.png)
 
 ## Overview
 
