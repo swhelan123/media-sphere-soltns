@@ -1195,3 +1195,14 @@ body::-webkit-scrollbar {
     margin-bottom: 2rem;
     margin-top: 35px; /* Additional space specifically for the title */
 }
+
+/* Fix hero text being hidden under navbar on mobile */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px; /* pushes everything down so it's not cut off */
+  }
+
+  html {
+    scroll-padding-top: 80px; /* makes anchor links scroll properly */
+  }
+}
