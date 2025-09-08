@@ -1199,6 +1199,6 @@ body::-webkit-scrollbar {
 /* Push hero content down on mobile */
 @media (max-width: 768px) {
   .hero-content {
-    padding-top: 400px; /* adjust this number until it looks good */
+    padding-top: 300px; /* adjust this number until it looks good */
   }
 }
