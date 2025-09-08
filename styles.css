@@ -1196,12 +1196,9 @@ body::-webkit-scrollbar {
     margin-top: 35px; /* Additional space specifically for the title */
 }
 
+/* Push hero content down on mobile */
 @media (max-width: 768px) {
-  .hero {
-    margin-top: 80px; /* adjust if needed */
-  }
-
-  html {
-    scroll-padding-top: 80px;
+  .hero-content {
+    padding-top: 100px; /* adjust this number until it looks good */
   }
 }
