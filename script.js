@@ -803,3 +803,39 @@ additionalStyles.textContent = `
 `;
 
 document.head.appendChild(additionalStyles);
+
+
+
+// Integrations Banner
+const logos = [
+    { src: 'images/logo1.png', alt: 'Partner Logo 1' },
+    { src: 'images/logo2.png', alt: 'Partner Logo 2' },
+    { src: 'images/logo3.png', alt: 'Partner Logo 3' },
+    { src: 'images/logo4.png', alt: 'Partner Logo 4' },
+    { src: 'images/logo5.png', alt: 'Partner Logo 5' },
+    { src: 'images/logo6.png', alt: 'Partner Logo 6' },
+    { src: 'images/logo7.png', alt: 'Partner Logo 7' },
+    { src: 'images/logo8.png', alt: 'Partner Logo 8' }
+];
+
+function initLogoSlider() {
+    const slider = document.getElementById('logoSlider');
+    
+    // Create logo track HTML
+    const createLogoTrack = () => {
+        return logos.map(logo => `
+            <div class="logo-item">
+                <img src="${logo.src}" alt="${logo.alt}">
+            </div>
+        `).join('');
+    };
+
+    // Create two identical tracks for seamless loop
+    slider.innerHTML = `
+        <div class="logo-track">${createLogoTrack()}</div>
+        <div class="logo-track">${createLogoTrack()}</div>
+    `;
+}
+
+// Initialize on page load
+window.addEventListener('DOMContentLoaded', initLogoSlider);
