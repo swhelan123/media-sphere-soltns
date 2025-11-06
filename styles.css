@@ -1315,10 +1315,7 @@ body::-webkit-scrollbar {
     }
 }
 
-/* Pause animation on hover */
-.integrations-section:hover .logo-slider {
-    animation-play-state: paused;
-}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
