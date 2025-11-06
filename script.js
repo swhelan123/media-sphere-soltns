@@ -808,10 +808,10 @@ document.head.appendChild(additionalStyles);
 
 // Integrations Banner
 const logos = [
-    { src: 'images/logo1.png', alt: 'Partner Logo 1' },
-    { src: 'images/logo2.png', alt: 'Partner Logo 2' },
-    { src: 'images/logo3.png', alt: 'Partner Logo 3' },
-    { src: 'images/logo4.png', alt: 'Partner Logo 4' },
+    { src: 'images/1b929bfbd5cb50f3d29a3154b9f14bb9.png', alt: 'Partner Logo 1' },
+    { src: 'images/20fcd1663a8d597a494e3fd81f64f73f.png', alt: 'Partner Logo 2' },
+    { src: 'images/2d50043b80e76d966802cde6ad48a5f4.png', alt: 'Partner Logo 3' },
+    { src: 'images/44ada239ad7ac239a0ee831a5090d810.png', alt: 'Partner Logo 4' },
     { src: 'images/logo5.png', alt: 'Partner Logo 5' },
     { src: 'images/logo6.png', alt: 'Partner Logo 6' },
     { src: 'images/logo7.png', alt: 'Partner Logo 7' },
