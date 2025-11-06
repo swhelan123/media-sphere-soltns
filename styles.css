@@ -1262,7 +1262,7 @@ body::-webkit-scrollbar {
 
 .logo-slider {
     display: flex;
-    animation: scroll 40s linear infinite;
+    animation: scroll 20s linear infinite;
 }
 
 .logo-track {
