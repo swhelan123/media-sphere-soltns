@@ -815,8 +815,8 @@ const logos = [
     { src: 'images/6bf2654de04e661f8fb724c334fdf352.png', alt: 'Partner Logo 5' },
     { src: 'images/76cc1f3966b698bfcdff7e3723a9f0f4.png', alt: 'Partner Logo 6' },
     { src: 'images/801c7f53f65d430e7a6ee6b23c2d6107.png', alt: 'Partner Logo 7' },
-    { src: 'images/809391ad559b23d48c2364eb8dd94ccd.png', alt: 'Partner Logo 8' }
-    { src: 'images/946df01ff29a16527cae692e79c5dd9c.png', alt: 'Logo 9' },
+ { src: 'images/809391ad559b23d48c2364eb8dd94ccd.png', alt: 'Partner Logo 8' },
+{ src: 'images/946df01ff29a16527cae692e79c5dd9c.png', alt: 'Logo 9' },
     { src: 'images/9ffdd66cdafb89313fb2391fd2f05943.png', alt: 'Logo 10' },
     { src: 'images/Microsoft_Office_Excel_Logo_512px.png.png', alt: 'Microsoft Excel' },
     { src: 'images/Microsoft_Office_OneNote_Logo_512px.png', alt: 'Microsoft OneNote' },
