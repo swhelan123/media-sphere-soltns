@@ -812,10 +812,10 @@ const logos = [
     { src: 'images/20fcd1663a8d597a494e3fd81f64f73f.png', alt: 'Partner Logo 2' },
     { src: 'images/2d50043b80e76d966802cde6ad48a5f4.png', alt: 'Partner Logo 3' },
     { src: 'images/44ada239ad7ac239a0ee831a5090d810.png', alt: 'Partner Logo 4' },
-    { src: 'images/logo5.png', alt: 'Partner Logo 5' },
-    { src: 'images/logo6.png', alt: 'Partner Logo 6' },
-    { src: 'images/logo7.png', alt: 'Partner Logo 7' },
-    { src: 'images/logo8.png', alt: 'Partner Logo 8' }
+    { src: 'images/6bf2654de04e661f8fb724c334fdf352.png', alt: 'Partner Logo 5' },
+    { src: 'images/76cc1f3966b698bfcdff7e3723a9f0f4.png', alt: 'Partner Logo 6' },
+    { src: 'images/801c7f53f65d430e7a6ee6b23c2d6107.png', alt: 'Partner Logo 7' },
+    { src: 'images/809391ad559b23d48c2364eb8dd94ccd.png', alt: 'Partner Logo 8' }
 ];
 
 function initLogoSlider() {
