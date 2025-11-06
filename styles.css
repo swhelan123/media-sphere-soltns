@@ -1262,17 +1262,16 @@ body::-webkit-scrollbar {
 
 .logo-slider {
     display: flex;
-    animation: scroll 25s linear infinite;
+    animation: scroll 40s linear infinite;
 }
 
 .logo-track {
     display: flex;
     align-items: center;
     gap: 50px;
-    padding: 0 25px;
+    padding: 0 50px;  /* Changed from 25px to 50px */
     flex-shrink: 0;
 }
-
 .logo-item {
     display: flex;
     align-items: center;
