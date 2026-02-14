@@ -134,6 +134,26 @@ h6 {
     color: var(--primary);
     transform: translateY(-2px);
 }
+.btn-portal {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--light);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btn-portal:hover {
+    border-color: var(--primary);
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-portal svg {
+    flex-shrink: 0;
+}
 
 .btn-full {
     width: 100%;
