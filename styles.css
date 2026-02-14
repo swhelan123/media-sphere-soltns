@@ -209,6 +209,21 @@ h6 {
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
+.nav-link-portal {
+    background: transparent;
+    color: var(--primary) !important;
+    padding: 12px 24px;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.nav-link-portal:hover {
+    background: var(--primary);
+    color: var(--dark) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
 
 .nav-toggle {
     display: none;
