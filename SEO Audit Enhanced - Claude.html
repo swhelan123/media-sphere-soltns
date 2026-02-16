@@ -1386,25 +1386,23 @@
             return recommendations[issue] || 'Contact our SEO experts for detailed guidance on fixing this issue.';
         }
         
-        function sendToGHL(email, website, scores) {
-            // Implement your GoHighLevel webhook integration here
-            console.log('Sending to GHL:', { email, website, scores });
-            
-            // Example:
-            // fetch('YOUR_GHL_WEBHOOK_URL', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify({
-            //         email: email,
-            //         website: website,
-            //         overall_score: calculateOverallScore(scores),
-            //         technical_score: scores.technical.score,
-            //         content_score: scores.content.score,
-            //         mobile_score: scores.mobile.score,
-            //         speed_score: scores.speed.score
-            //     })
-            // });
-        }
+   function sendToGHL(email, website, scores) {
+    const webhookUrl = 'https://services.leadconnectorhq.com/hooks/51q1bP5o9HOeiNztXOx6/webhook-trigger/34066357-0aa2-4a2e-84a5-50f4385b0927';
+    
+    fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            email: email,
+            tags: ['SEO Test']
+        })
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
         
         async function updateStep(step, status) {
             const stepElement = document.querySelector(`[data-step="${step}"]`);
